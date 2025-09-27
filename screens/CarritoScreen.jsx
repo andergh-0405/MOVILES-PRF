@@ -9,7 +9,7 @@ export default function CarritoScreen({ carrito, setCarrito, pedidos, setPedidos
     setCarrito(nuevoCarrito);
   };
 
-  
+
   const disminuirCantidad = (index) => {
     const nuevoCarrito = [...carrito];
     if (nuevoCarrito[index].cantidad > 1) {
@@ -18,14 +18,14 @@ export default function CarritoScreen({ carrito, setCarrito, pedidos, setPedidos
     }
   };
 
- 
+
   const eliminarProducto = (index) => {
     const nuevoCarrito = [...carrito];
     nuevoCarrito.splice(index, 1);
     setCarrito(nuevoCarrito);
   };
 
- 
+
   const confirmarPedido = () => {
     if (!carrito || carrito.length === 0) {
       Alert.alert('Carrito vacío', 'Agrega productos al carrito primero');
@@ -38,7 +38,7 @@ export default function CarritoScreen({ carrito, setCarrito, pedidos, setPedidos
     setPedidos([...pedidosActuales, ...carritoActual]);
     setCarrito([]);
     Alert.alert('✅ Pedido Confirmado', 'Tu pedido ha sido procesado correctamente');
-    
+
     navigation.reset({
       index: 0,
       routes: [
@@ -62,7 +62,7 @@ export default function CarritoScreen({ carrito, setCarrito, pedidos, setPedidos
 
   return (
     <View style={styles.container}>
-      
+
       <TouchableOpacity
         style={[styles.confirmButton, (!carrito || carrito.length === 0) && styles.disabledButton]}
         onPress={confirmarPedido}
@@ -71,14 +71,14 @@ export default function CarritoScreen({ carrito, setCarrito, pedidos, setPedidos
         <Text style={styles.confirmButtonText}>✅ Confirmar Pedido</Text>
       </TouchableOpacity>
 
-      
+
       <View style={styles.resumenContainer}>
         <Text style={styles.totalText}>Subtotal: ${subtotal.toFixed(2)}</Text>
         <Text style={styles.ivaText}>IVA (15%): ${iva.toFixed(2)}</Text>
         <Text style={styles.totalConIvaText}>Total: ${totalConIva.toFixed(2)}</Text>
       </View>
 
-      
+
       {!carrito || carrito.length === 0 ? (
         <View style={styles.emptyContainer}>
           <Text style={styles.emptyText}>🛒 Tu carrito está vacío</Text>
@@ -90,7 +90,6 @@ export default function CarritoScreen({ carrito, setCarrito, pedidos, setPedidos
           keyExtractor={(item, index) => `${item.id}-${index}`}
           renderItem={({ item, index }) => (
             <View style={styles.productCard}>
-              {/* Información del producto */}
               <View style={styles.productInfo}>
                 <Text style={styles.productName}>{item.nombre}</Text>
                 <Text style={styles.productPrice}>${item.precio} c/u</Text>
@@ -99,18 +98,18 @@ export default function CarritoScreen({ carrito, setCarrito, pedidos, setPedidos
                 </Text>
               </View>
 
-              
+
               <View style={styles.cantidadContainer}>
-                <TouchableOpacity 
+                <TouchableOpacity
                   style={styles.cantidadButton}
                   onPress={() => disminuirCantidad(index)}
                 >
                   <Text style={styles.cantidadButtonText}>-</Text>
                 </TouchableOpacity>
-                
+
                 <Text style={styles.cantidadText}>{item.cantidad || 1}</Text>
-                
-                <TouchableOpacity 
+
+                <TouchableOpacity
                   style={styles.cantidadButton}
                   onPress={() => aumentarCantidad(index)}
                 >
@@ -118,7 +117,7 @@ export default function CarritoScreen({ carrito, setCarrito, pedidos, setPedidos
                 </TouchableOpacity>
               </View>
 
-              
+
               <TouchableOpacity
                 style={styles.deleteButton}
                 onPress={() => eliminarProducto(index)}

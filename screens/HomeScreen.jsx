@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {View,Text,FlatList,Image,StyleSheet,TouchableOpacity,Alert,ActivityIndicator,} from 'react-native';
+import { View, Text, FlatList, Image, StyleSheet, TouchableOpacity, Alert, ActivityIndicator, } from 'react-native';
 import { products } from '../data/products';
 
 export default function HomeScreen({ navigation, carrito, setCarrito }) {
@@ -17,16 +17,16 @@ export default function HomeScreen({ navigation, carrito, setCarrito }) {
   };
 
   const agregarAlCarrito = (item) => {
-  const yaEnCarrito = carrito.some(producto => producto.id === item.id);
+    const yaEnCarrito = carrito.some(producto => producto.id === item.id);
 
-  if (yaEnCarrito) {
-    Alert.alert('Ya agregado', `${item.nombre} ya está en tu carrito`);
-    return;
-  }
+    if (yaEnCarrito) {
+      Alert.alert('Ya agregado', `${item.nombre} ya está en tu carrito`);
+      return;
+    }
 
-  setCarrito([...carrito, item]);
-  Alert.alert('Agregado', `${item.nombre} ha sido agregado a tu carrito`);
-};
+    setCarrito([...carrito, item]);
+    Alert.alert('Agregado', `${item.nombre} ha sido agregado a tu carrito`);
+  };
 
   if (loading) {
     return (
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: '#f9fafb', 
+    backgroundColor: '#f9fafb',
     padding: 12,
   },
   header: {

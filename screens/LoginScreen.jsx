@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#18122B', // Fondo oscuro tipo cine
+    backgroundColor: '#18122B', 
   },
   background: {
     ...StyleSheet.absoluteFillObject,
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
   card: {
     width: '90%',
     maxWidth: 420,
-    backgroundColor: '#393053', // Panel oscuro
+    backgroundColor: '#393053', 
     borderRadius: 24,
     padding: 38,
     alignItems: 'center',
@@ -104,7 +104,7 @@ const styles = StyleSheet.create({
   },
   logo: {
     fontSize: 54,
-    color: '#FFD700', // Amarillo dorado tipo Oscar
+    color: '#FFD700', 
     textShadowColor: '#5C5470',
     textShadowOffset: { width: 2, height: 2 },
     textShadowRadius: 8,
@@ -144,18 +144,18 @@ const styles = StyleSheet.create({
   },
   input: {
     height: 54,
-    backgroundColor: '#443C68', // Fondo panel oscuro
+    backgroundColor: '#443C68', 
     borderRadius: 16,
     paddingHorizontal: 18,
     fontSize: 16,
     color: '#FFD700',
     borderWidth: 2,
-    borderColor: '#FFD700', // Borde dorado
+    borderColor: '#FFD700', 
     marginBottom: 2,
   },
   loginButton: {
     height: 56,
-    backgroundColor: '#FFD700', // Botón dorado
+    backgroundColor: '#FFD700',
     borderRadius: 16,
     justifyContent: 'center',
     alignItems: 'center',

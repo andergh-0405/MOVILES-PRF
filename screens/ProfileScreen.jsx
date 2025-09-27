@@ -165,20 +165,20 @@ export default function ProfileScreen({ navigation }) {
               style={[styles.button, styles.editButton]}
               onPress={() => setIsEditing(true)}
             >
-              <Text style={styles.buttonText}>✏️ Editar Perfil</Text>
+              <Text style={styles.buttonText}>Editar Perfil</Text>
             </TouchableOpacity>
           )}
         </View>
       </View>
 
       <TouchableOpacity style={styles.logoutButton} onPress={cerrarSesion}>
-        <Text style={styles.logoutButtonText}>🚪 Cerrar Sesión</Text>
+        <Text style={styles.logoutButtonText}>Cerrar Sesión</Text>
       </TouchableOpacity>
     </ScrollView>
   );
 }
 
-// Agregamos un estilo para centrar el loading (opcional)
+
 const styles = StyleSheet.create({
   center: {
     flex: 1,
