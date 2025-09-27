@@ -33,8 +33,8 @@ export default function LoginScreen({ navigation }) {
           
         </View>
 
-        <Text style={styles.title}>Bienvenido</Text>
-        <Text style={styles.subtitle}>Inicia sesión para acceder a tu cuenta</Text>
+        <Text style={styles.title}>WELCOME</Text>
+        <Text style={styles.subtitle}>INICIA SESION PARA COMPRAR</Text>
 
         <View style={styles.formContainer}>
           <View style={styles.inputWrapper}>
@@ -51,7 +51,7 @@ export default function LoginScreen({ navigation }) {
           </View>
 
           <View style={styles.inputWrapper}>
-            <Text style={styles.label}>Contraseña</Text>
+            <Text style={styles.label}><CLAVE></CLAVE></Text>
             <TextInput
               style={styles.input}
               placeholder="••••••••"
@@ -62,7 +62,7 @@ export default function LoginScreen({ navigation }) {
           </View>
 
           <TouchableOpacity style={styles.loginButton} onPress={entrar} activeOpacity={0.9}>
-            <Text style={styles.loginButtonText}>Iniciar Sesión</Text>
+            <Text style={styles.loginButtonText}>INCIAR SESION</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -172,7 +172,7 @@ const styles = StyleSheet.create({
       },
     }),
   },
-  
+
   loginButtonText: {
     color: '#18122B',
     fontSize: 19,
