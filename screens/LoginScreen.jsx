@@ -16,7 +16,7 @@ export default function LoginScreen({ navigation }) {
 
   const entrar = () => {
     if (email.trim().toLowerCase() !== 'store@gmail.com' || password !== 'store') {
-      Alert.alert('Error', 'Correo o contraseña incorrectos');
+      Alert.alert('Error', 'Credenciales incorrectas');
       return;
     }
     navigation.replace('Home');
@@ -112,11 +112,11 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 30,
     fontWeight: '700',
-    color: '#ff8400ff',
+    color: '#c8a177ff',
     textAlign: 'center',
     marginBottom: 10,
     letterSpacing: 1.2,
-    textShadowColor: '#443C68',
+    textShadowColor: '#4f28feff',
     textShadowOffset: { width: 1, height: 2 },
     textShadowRadius: 6,
   },
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
     marginTop: 12,
     ...Platform.select({
       ios: {
-        shadowColor: '#FFD700',
+        shadowColor: '#ffe658ff',
         shadowOffset: { width: 0, height: 8 },
         shadowOpacity: 0.4,
         shadowRadius: 14,
@@ -172,6 +172,7 @@ const styles = StyleSheet.create({
       },
     }),
   },
+  
   loginButtonText: {
     color: '#18122B',
     fontSize: 19,
