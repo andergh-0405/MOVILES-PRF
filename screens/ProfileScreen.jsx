@@ -91,7 +91,7 @@ export default function ProfileScreen({ navigation }) {
         <Text style={styles.welcomeText}>
           ¡Hola, {userData.nombre || 'Usuario'}!
         </Text>
-        <Text style={styles.subtitle}>Gestiona tu perfil aquí</Text>
+        <Text style={styles.subtitle}>Gestiona tu perfil</Text>
       </View>
 
       <View style={styles.formContainer}>
