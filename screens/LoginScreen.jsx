@@ -15,7 +15,7 @@ export default function LoginScreen({ navigation }) {
   const [password, setPassword] = useState('');
 
   const entrar = () => {
-    if (email.trim().toLowerCase() !== 'store@gmail.com' || password !== 'store') {
+    if (email.trim().toLowerCase() !== 'tiendita@gmail.com' || password !== '123456') {
       Alert.alert('Error', 'Credenciales incorrectas');
       return;
     }
@@ -88,7 +88,7 @@ const styles = StyleSheet.create({
     borderRadius: 24,
     padding: 38,
     alignItems: 'center',
-    shadowColor: '#5C5470',
+    shadowColor: '#5c547064',
     shadowOffset: {
       width: 0,
       height: 12,
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 30,
     fontWeight: '700',
-    color: '#c8a177ff',
+    color: '#ff8400ff',
     textAlign: 'center',
     marginBottom: 10,
     letterSpacing: 1.2,
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
     marginTop: 12,
     ...Platform.select({
       ios: {
-        shadowColor: '#ffe658ff',
+        shadowColor: '#58ff8565',
         shadowOffset: { width: 0, height: 8 },
         shadowOpacity: 0.4,
         shadowRadius: 14,
