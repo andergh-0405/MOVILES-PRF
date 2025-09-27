@@ -15,7 +15,7 @@ export default function LoginScreen({ navigation }) {
   const [password, setPassword] = useState('');
 
   const entrar = () => {
-    if (email.trim().toLowerCase() !== 'app@gmail.com' || password !== '123456') {
+    if (email.trim().toLowerCase() !== 'store@gmail.com' || password !== 'store') {
       Alert.alert('Error', 'Correo o contraseña incorrectos');
       return;
     }
