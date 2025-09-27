@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
   card: {
     width: '90%',
     maxWidth: 420,
-    backgroundColor: '#393053', 
+    backgroundColor: '#191721ff', 
     borderRadius: 24,
     padding: 38,
     alignItems: 'center',
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 30,
     fontWeight: '700',
-    color: '#FFD700',
+    color: '#ff8400ff',
     textAlign: 'center',
     marginBottom: 10,
     letterSpacing: 1.2,
